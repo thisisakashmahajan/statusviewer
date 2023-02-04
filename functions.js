@@ -1,6 +1,7 @@
 function load() {
     let id = $("#project_id").val();
     let updated = false;
+    $("#project_status").html("Loading...");
     $.getJSON('data.json', function (data) {
         $.each(data.project, function(i, project) {
             if(data.project[i].project_id == id) {
